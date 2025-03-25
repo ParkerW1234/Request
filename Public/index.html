@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly Rancher Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Request a Jolly Rancher</h1>
+
+    <form id="request-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Personal Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="flavor">Flavor:</label>
+            <select id="flavor" name="flavor" required>
+                <option value="" disabled selected>Select a Flavor</option>
+                <option value="Cherry">Cherry</option>
+                <option value="Watermelon">Watermelon</option>
+                <option value="Green Apple">Green Apple</option>
+                <option value="Blue Raspberry">Blue Raspberry</option>
+                <option value="Grape">Grape</option>
+                <option value="Other">Other (Specify in Reason)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <div id="message-area" class="message-area" style="display: none;">
+        <!-- Messages will be displayed here -->
+    </div>
+
+    <!-- Firebase SDK -->
+    <!-- Update these script tags to the latest versions if needed from Firebase docs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- Your App's Logic -->
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyDbtXyh84oLMSMhAuVc5TRJvIcMi1c2m5I",
+  authDomain: "jollyrancher-840e9.firebaseapp.com",
+  projectId: "jollyrancher-840e9",
+  storageBucket: "jollyrancher-840e9.firebasestorage.app",
+  messagingSenderId: "949125457638",
+  appId: "1:949125457638:web:d91db3d1ab560d7e627d27",
+  measurementId: "G-Z4FK1P28D6"
+};
+
+Uid kIpI37Q4bqbgGt5KUYslHA8xtOu2
+
+
