@@ -8,10 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1" 
   }, 
   "engines": {
-    "node": "22.x" // Or 18.x / 20.x
+    "node": "22.x" 
   },
   "dependencies": {
-    "express": "^4.17.1" // Or latest  
+    "express": "^4.17.1" 
   }, 
   "author": "",
   "license": "ISC" 
