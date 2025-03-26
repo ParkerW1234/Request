@@ -23,7 +23,7 @@ exports.updateRequestStatus = functions.https.onRequest(async (req, res) => {
   // IMPORTANT: Replace '*' with your actual Azure Static Web App URL in production
   // e.g., "https://your-app-name.azurestaticapps.net"
   // For local testing, you might need "http://localhost:8080"
-  res.set("Access-Control-Allow-Origin", "https://parkerw1234.github.io"); // Line 17 - Kept short
+  res.set("Access-Control-Allow-Origin", "https://parkerw1234.github.io/"); // Line 17 - Kept short
   
   if (req.method === "OPTIONS") {
     // Handle preflight CORS requests
