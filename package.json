@@ -8,10 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "18.x" // Specify a Node.js version Heroku supports (e.g., 18.x, 20.x)
+    "node": "18.x" 
   },
   "dependencies": {
-    "express": "^4.17.1" // Or latest version of Express
+    "express": "^4.17.1" 
   },
   "author": "",
   "license": "ISC"
