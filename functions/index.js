@@ -64,7 +64,7 @@ exports.updateRequestStatus = functions.https.onRequest(async (req, res) => {
     // ---- TEACHER AUTHORIZATION CHECK ----
     // Compare the UID from the token with the known Teacher UID
     // Replace "YOUR_TEACHER_UID_HERE" with the UID you saved in Segment 1
-    const teacherUid = "kIpI37Q4bqbgGt5KUYslHA8xtOu2";
+    const teacherUid = "kIpI37Q4bqbgGt5KUYslHA8xtOu2" or "jAHeiVc2nZSdf44WTDJEUYPhSGp2";
     if (decodedToken.uid !== teacherUid) { // Line 58
       console.error(
           `Auth Error: UID ${decodedToken.uid} does not match Teacher UID ${teacherUid}`,
