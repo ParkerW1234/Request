@@ -24,7 +24,7 @@ exports.updateRequestStatus = functions.https.onRequest(async (req, res) => {
   // e.g., "https://your-app-name.azurestaticapps.net"
   // For local testing, you might need "http://localhost:8080"
   res.set("Access-Control-Allow-Origin", "*"); // Line 17 - Kept short
-
+  "https://parkerw1234.github.io");
   if (req.method === "OPTIONS") {
     // Handle preflight CORS requests
     res.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS"); // Line 22
