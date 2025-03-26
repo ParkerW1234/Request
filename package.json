@@ -5,16 +5,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-    // Did you add a script here with a comma after it?
-  }, // Closing brace for scripts
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  }, 
   "engines": {
     "node": "22.x" // Or 18.x / 20.x
-  }, // Closing brace for engines
+  },
   "dependencies": {
-    "express": "^4.17.1" // Or latest
-    // Did you add a dependency here with a comma after it?
-  }, // Closing brace for dependencies (Maybe line 18 if description was long?)
+    "express": "^4.17.1" // Or latest  
+  }, 
   "author": "",
-  "license": "ISC" // NO comma after the last key-value pair in the whole object
+  "license": "ISC" 
 }
