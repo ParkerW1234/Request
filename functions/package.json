@@ -1,6 +1,5 @@
 {
   "name": "functions",
-  // ...
   "engines": {
     "node": "22" // Or 18/20
   },
@@ -8,12 +7,10 @@
   "dependencies": {
     "firebase-admin": "^12.7.0",
     "firebase-functions": "^6.0.1",
-    // ---> Moved from devDependencies <---
-    "eslint": "^8.15.0", // Or your specific version
-    "eslint-config-google": "^0.14.0" // Or your specific version
+    "eslint": "^8.15.0", 
+    "eslint-config-google": "^0.14.0"]
   },
   "devDependencies": {
-    // ---> ESLint lines removed from here <---
     "firebase-functions-test": "^3.1.0"
   },
   "private": true
