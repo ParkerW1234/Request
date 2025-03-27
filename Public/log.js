@@ -50,7 +50,7 @@ function renderStatus(status) {
 async function handleUpdateRequest(requestId, action, comment = null) {
     console.log(`Attempting action: ${action} for request ${requestId} with comment: ${comment}`);
 
-    if (!updateFunctionUrl || updateFunctionUrl === 'YOUR_FIREBASE_FUNCTION_URL_HERE') {
+    if (!updateFunctionUrl || updateFunctionUrl === 'https://us-central1-jollyrancher-840e9.cloudfunctions.net/updateRequestStatus') {
          alert('Error: Firebase Function URL is not configured in log.js.');
          console.error('Firebase Function URL is not configured.');
          return;
@@ -215,7 +215,7 @@ auth.onAuthStateChanged(user => {
     if (user) {
         console.log("Log page: User is logged in:", user.email);
         // Make sure the function URL placeholder is updated after deployment!
-        if (!updateFunctionUrl || updateFunctionUrl === 'YOUR_FIREBASE_FUNCTION_URL_HERE') {
+        if (!updateFunctionUrl || updateFunctionUrl === 'https://us-central1-jollyrancher-840e9.cloudfunctions.net/updateRequestStatus') {
             console.warn('Firebase Function URL is not set in log.js. Actions will fail.');
             // Optionally display a warning to the user on the page
         }
