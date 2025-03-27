@@ -20,7 +20,7 @@ const logoutButton = document.getElementById('logout-button-log');
 
 // --- Firebase Function URL (Replace AFTER deploying the function) ---
 // We will get this URL in the next step after deploying the Cloud Function
-const updateFunctionUrl = 'https://console.firebase.google.com/project/jollyrancher-840e9/overview'; // Placeholder
+const updateFunctionUrl = 'https://us-central1-jollyrancher-840e9.cloudfunctions.net/updateRequestStatus'; // Placeholder
 
 // Basic HTML escaping helper using backticks
 const escapeHtml = (unsafe) => { // LINE 1
