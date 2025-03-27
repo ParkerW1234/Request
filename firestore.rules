@@ -1,16 +1,29 @@
+// --- Rules using Function Check (Example) ---
+rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      // This rule allows anyone with your database reference to view, edit,
-      // and delete all data in your database. It is useful for getting
-      // started, but it is configured to expire after 30 days because it
-      // leaves your app open to attackers. At that time, all client
-      // requests to your database will be denied.
-      //
-      // Make sure to write security rules for your app before that time, or
-      // else all client requests to your database will be denied until you
-      // update your rules.
-      allow read, write: if request.time < timestamp.date(2025, 4, 24);
+
+    // Helper for validation (keep as before)
+    function isIncomingRequestValid() {
+       // ... validation logic ...
+    }
+
+    match /requests/{requestId} {
+      // CREATE: Allow anonymous, validated
+      allow create: if request.auth == null && isIncomingRequestValid();
+
+      // GET: Allow authenticated OR anonymous (for status page)
+      allow get: if request.auth != null || request.auth == null; // Anyone can get if they have the ID
+
+      // LIST: Allow ANY authenticated user (function will filter later if needed)
+      // Or keep the specific teacher list check here for extra safety
+       allow list: if request.auth != null; // Or use isAuthorizedTeacher() from Method 1
+
+      // UPDATE: Allow ANY authenticated user (FUNCTION MUST VALIDATE)
+      allow update: if request.auth != null;
+
+      // DELETE: Disallow
+      allow delete: if false;
     }
   }
 }
